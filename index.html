@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopZone - modern responsive e-commerce store">
+  <title>ShopZone | Modern E-Commerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">Free shipping on orders above ₹999 <span>•</span> Easy 7-day returns</div>
+
+  <header class="header">
+    <a class="logo" href="#home" aria-label="ShopZone home"><span>SHOP</span>ZONE</a>
+    <nav class="desktop-nav">
+      <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Shop</a>
+      <a href="#deals">Deals</a><a href="#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡<b id="wishlistCount">0</b></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<b id="cartCount">0</b></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products, categories..." autocomplete="off"><button id="clearSearch">×</button></div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Shop</a><a href="#deals">Deals</a><a href="#footer">Contact</a>
+  </nav>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">NEW SEASON • 2026 COLLECTION</p>
+        <h1>Discover Products<br><span>You'll Love.</span></h1>
+        <p class="hero-text">Curated fashion, electronics and lifestyle essentials with great prices and fast delivery.</p>
+        <div class="hero-buttons"><a class="btn primary" href="#products">Shop Now</a><a class="btn ghost" href="#categories">Explore Categories</a></div>
+        <div class="hero-stats"><div><strong>10K+</strong><span>Products</span></div><div><strong>50K+</strong><span>Customers</span></div><div><strong>4.8/5</strong><span>Rating</span></div></div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="Fashion collection">
+        <div class="floating-card"><span>🔥</span><div><strong>Trending Now</strong><small>Up to 40% off</small></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="categories">
+      <div class="section-head"><div><p class="eyebrow">SHOP BY CATEGORY</p><h2>Explore Categories</h2></div><a href="#products">View all →</a></div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Fashion"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"><span>Fashion</span></button>
+        <button class="category-card" data-category="Electronics"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80"><span>Electronics</span></button>
+        <button class="category-card" data-category="Beauty"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"><span>Beauty</span></button>
+        <button class="category-card" data-category="Home"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80"><span>Home</span></button>
+        <button class="category-card" data-category="Accessories"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80"><span>Accessories</span></button>
+        <button class="category-card" data-category="Sports"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80"><span>Sports</span></button>
+      </div>
+    </section>
+
+    <section class="section container" id="products">
+      <div class="section-head"><div><p class="eyebrow">OUR COLLECTION</p><h2>Featured Products</h2></div><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Fashion">Fashion</button><button class="filter" data-filter="Electronics">Electronics</button><button class="filter" data-filter="Accessories">Accessories</button></div></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><div>🔎</div><h3>No products found</h3><p>Try another search or category.</p></div>
+    </section>
+
+    <section class="deal container" id="deals">
+      <div><p class="eyebrow">LIMITED TIME OFFER</p><h2>Big Sale — Up to <span>50% Off</span></h2><p>Grab your favorites before the offer ends.</p><a class="btn light" href="#products">Shop Sale</a></div>
+      <div class="deal-badge">50%<small>OFF</small></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head"><div><p class="eyebrow">SHOP WITH CONFIDENCE</p><h2>Why Choose ShopZone?</h2></div></div>
+      <div class="benefits"><div><span>🚚</span><h3>Fast Delivery</h3><p>Quick and reliable delivery.</p></div><div><span>🔒</span><h3>Secure Payment</h3><p>Safe checkout and payments.</p></div><div><span>↩️</span><h3>Easy Returns</h3><p>7-day hassle-free returns.</p></div><div><span>🎧</span><h3>24/7 Support</h3><p>We're here whenever you need us.</p></div></div>
+    </section>
+
+    <section class="newsletter container">
+      <div><p class="eyebrow">GET 10% OFF</p><h2>Stay Updated</h2><p>Subscribe for new products, exclusive offers and useful updates.</p></div>
+      <form id="newsletterForm"><input type="email" placeholder="Enter your email address" required><button class="btn primary">Subscribe</button></form>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-grid container">
+      <div><a class="logo footer-logo" href="#home"><span>SHOP</span>ZONE</a><p>Your everyday destination for quality products at great prices.</p></div>
+      <div><h4>Shop</h4><a href="#products">All Products</a><a href="#categories">Categories</a><a href="#deals">Deals</a></div>
+      <div><h4>Support</h4><a href="#">Shipping & Returns</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+      <div><h4>Contact</h4><a href="mailto:hello@shopzone.com">vishnusingh@gmail.com</a><a href="tel:+919999999999">8103746653</a><p>Mon–Sat, 9 AM–6 PM</p></div>
+    </div>
+    <div class="copyright">© 2026 ShopZone. All rights reserved.</div>
+  </footer>
+
+  <div class="drawer-overlay" id="overlay"></div>
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><small>Taxes and shipping calculated at checkout.</small><button class="btn primary full" id="checkoutBtn">Proceed to Checkout</button></div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <div class="modal-card"><button class="modal-close" id="closeModal">×</button><div id="modalContent"></div></div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
